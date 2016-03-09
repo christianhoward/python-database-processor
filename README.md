@@ -1,5 +1,4 @@
 # Python Database Processor
-=======================
 
 A database processor built using Python 2.7, PyQt4, and SQLite3
 
