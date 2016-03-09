@@ -2,18 +2,18 @@
 
 A database processor built using Python 2.7, PyQt4, and SQLite3
 
-#### Requirements
+## Requirements
 - Python 2.7
 - PyQt4
 - SQLite3
 
-#### To Run
+## To Run
 This program can be launched through command line or IDLE. In your terminal, navigate to the directory where the databaseprocessor.py file is located and enter the following command to run it:
 ```sh
 python databaseprocessor.py
 ```
 
-#### Overview
+## Overview
 Prior to launching the program, please check lines 174-177 to update the file path to the directory where your table .txt file can be found.
 
 In the Graphic User Interface (GUI), you'll find a file loader at the top. In this first box, you'll enter the file name. It should be noted that there is placeholder text in each line edit in the program. For any line edit where an input is required, in this case Load File, Count Rows, Sum Revenue, and Execute SQL, you will need to clear the lines out before adding an input.
@@ -36,7 +36,7 @@ Lines 5 - 212 define the class Form. Within the class are multiple methods, incl
 - button6Pressed (lines 205 - 209)
 - buttonQuitPressed (lines 210 - 212)
 
-#### __init
+#### __init__
 The __init__ method creates the form, including all line edits and buttons. Additionally, it established all connections between buttons and their respective form methods (ie: pbutton1 and button1Pressed). 
 
 #### parseDB
@@ -75,5 +75,5 @@ The SQLExecution method will execute any SQL statement the user enters into the 
 #### Form Methods
 Each form method (button1Pressed, button2Pressed, button3Pressed, button4Pressed, button5Pressed, button6Pressed, buttonQuitPressed) executes the specific method attached to it (ie: button2Pressed executes the parseDB method). Each form method outputs a specific set of text in regards to the method it executed.
 
-### Questions??
+## Questions??
 If you have any questions, please feel free to contact me.
