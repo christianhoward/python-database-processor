@@ -48,8 +48,8 @@ There are 12 cars within the Cars table:
 - Chevrolet Spark
 - Ford Fusion
 - Fprd Escape (this typo was part of the dataset)
-- Hundai Accent
-- Hundai Sonata
+- Hundai Accent (this typo was part of the dataset)
+- Hundai Sonata (this typo was part of the dataset)
 - Kia Forte
 - Nissan Versa
 - Toyota Corolla
