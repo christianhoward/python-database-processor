@@ -14,11 +14,57 @@ python databaseprocessor.py
 ```
 
 ## Overview
-Prior to launching the program, please check lines 174-177 to update the file path to the directory where your table .txt file can be found.
+Prior to launching the program, please check lines 174-177 to update the file path to the directory where your table .txt file can be found. A relative file path has been set for Mac users and there are comments within lines 174 and 177 that address absolute path and relative path for Windows and Mac users alike.
 
 In the Graphic User Interface (GUI), you'll find a file loader at the top. In this first box, you'll enter the file name. It should be noted that there is placeholder text in each line edit in the program. For any line edit where an input is required, in this case Load File, Count Rows, Sum Revenue, and Execute SQL, you will need to clear the lines out before adding an input.
 
 All “functions” in this program are actually methods within the defined Form class. Thus, all methods can be found below the initialization method. The Parse and Populate and Revenue Summary methods are executed by pushing their respective buttons. No text entry is needed in their respective line edits. For the Count Rows, Sum Revenue, and Execute SQL methods, you will need to enter words in their respective line edits. The results for the Count Rows and Sum Revenue methods will return in the GUI. The results for the Revenue Summary and Execute SQL methods will return in the IDLE/Terminal window. The Execute SQL method returns the results of your query as a tuple.
+
+## Project Description
+In this instance, the database processor program can be used to analyze revenue reports from regional car rental locations.
+
+There are 5 tables within this database:
+- Locations
+- Cars
+- Plans
+- Rates
+- Sales
+
+There are 10 locations within the Locations table:
+- Alexandria
+- Annapolis
+- Fairfax
+- Hagerstown
+- Richmond
+- Rockville
+- Rosslyn
+- Taneytown
+- Washington
+- Westminster
+
+There are 12 cars within the Cars table:
+- Chevrolet Impala
+- Chevrolet Malibu
+- Chevrolet Spark
+- Ford Fusion
+- Fprd Escape (this typo was part of the dataset)
+- Hundai Accent
+- Hundai Sonata
+- Kia Forte
+- Nissan Versa
+- Toyota Corolla
+- Toyota RAV4
+- Volkswagen Jetta
+
+There are 10 plans within the Plans table (PID 1-10). Specifics can be found be querying the following in the SQL Execution box:
+```sh
+SELECT * FROM Plans ORDER BY PID ASC;
+```
+
+There are 4 rates within the Rates table (RLID 1-4). Specifics can be found be querying the following in the SQL Execution box:
+```sh
+SELECT * FROM Rates ORDER BY RLID ASC;
+```
 
 ## Code Explanation
 Lines 5 - 212 define the class Form. Within the class are multiple methods, including:
