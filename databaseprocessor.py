@@ -43,6 +43,7 @@ class Form( QDialog):
         self.connect(self.pbutton6, SIGNAL("clicked()"),self.button6Pressed)
         self.connect(self.pbuttonQuit, SIGNAL("clicked()"),self.buttonQuitPressed)
         self.setWindowTitle("Database Application")
+    #break .txt file into the respective tables
     def parseDB(self):
         locations = []
         cars = []
@@ -137,6 +138,7 @@ class Form( QDialog):
         conn.commit()
         print "Rows Inserted and Committed"
         conn.close()
+    #Count number of rows in a specific table
     def CountRows(self, table):
         count = 0
         conn = sqlite3.connect('CarRentals.db')
@@ -145,6 +147,7 @@ class Form( QDialog):
         for row in cur:
             count = count + 1
         return count
+    #provide total revenue for locations
     def SumRevenue(self, location):
         conn = sqlite3.connect('CarRentals.db')
         cur = conn.cursor()
@@ -154,6 +157,7 @@ class Form( QDialog):
             x = row[2]
             print str(row[0]) + '\t' + str(row[1]) + '\t' + str(row[2]) + '\n'
         return x
+    #provide total and average revenue for locations broken down by car make and model
     def RevSumReport(self):
         conn = sqlite3.connect('CarRentals.db')
         cur = conn.cursor()
@@ -162,6 +166,7 @@ class Form( QDialog):
         print 'Town' + '\t' + 'State' + '\t' + 'Make' + '\t' + 'Model' + '\t' + 'Total Revenue' + '\t' + 'Average Revenue'
         for row in cur:
             print str(row[0]) + '\t' + str(row[1]) + '\t' + str(row[2]) + '\t' + str(row[3]) + '\t' + str(row[4]) + '\t' + str(row[5])
+    #run additional sql queries
     def SQLExecution(self, statement):
         conn = sqlite3.connect('CarRentals.db')
         cur = conn.cursor()
