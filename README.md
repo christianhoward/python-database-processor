@@ -1,6 +1,6 @@
 # Python Database Processor
 
-A database processor built using Python 2.7, PyQt4, and SQLite3
+A database processor built using Python 2.7, PyQt4, and SQLite3.
 
 ## Requirements
 - Python 2.7
